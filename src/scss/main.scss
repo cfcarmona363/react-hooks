@@ -1,0 +1,23 @@
+@import './inputComponent.scss';
+@import './buttonComponent.scss';
+@import './textDisplay.scss';
+@import './loader.scss';
+
+.container {
+	width: 500px;
+	margin-top: 80px;
+}
+
+.buttons-group {
+	display: flex;
+	div {
+		margin: 5px;
+	}
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 30% 40%;
+	grid-gap: 100px;
+	margin-left: 100px;
+}

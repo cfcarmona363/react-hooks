@@ -1,0 +1,33 @@
+.text-display {
+  margin: 20px;
+  span {
+    position: relative;
+  }
+
+  span::before,
+  span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #ffb17f;
+    transform-origin: center right;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+  }
+
+  span::before {
+    top: 0;
+  }
+
+  span::after {
+    bottom: 0;
+  }
+
+  span:hover::before,
+  span:hover::after {
+    transform-origin: center left;
+    transform: scaleX(1);
+  }
+}
