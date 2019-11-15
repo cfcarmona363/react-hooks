@@ -4,7 +4,7 @@ import InputComponent from '../components/inputComponent'
 import TextDisplay from '../components/textDisplay'
 import ButtonComponent from '../components/buttonComponent'
 
-const Home = ({ history }) => {
+const FirstExample = ({ history }) => {
 	//HOOKS
 	const [value, setValue] = useState()
 	const [value2, setValue2] = useState()
@@ -59,7 +59,7 @@ const Home = ({ history }) => {
 				<ButtonComponent
 					type="bubble"
 					label="Next example"
-					handleClick={() => history.push('/person')}
+					handleClick={() => history.push('/SecondExample')}
 				/>
 			</div>
 			<div>
@@ -71,4 +71,4 @@ const Home = ({ history }) => {
 	)
 }
 
-export default Home
+export default FirstExample

@@ -3,19 +3,19 @@ import { Route, Switch, BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import store from './store'
 //CONTAINERS
-import Home from './containers/Home'
-import Bye from './containers/Bye'
-import Person from './containers/Person'
+import FirstExample from './containers/FirstExample'
+import SecondExample from './containers/SecondExample'
+import CustomHooks from './containers/CustomHooks'
 
 const App = () => {
 	return (
 		<Provider store={store}>
 			<BrowserRouter>
 				<Switch>
-					<Route exact path="/" component={Home} />
-					<Route exact path="/bye" component={Bye} />
+					<Route exact path="/" component={FirstExample} />
+					<Route exact path="/SecondExample" component={SecondExample} />
+					<Route exact path="/customHooks" component={CustomHooks} />
 				</Switch>
-				<Route exact path="/person" component={Person} />
 			</BrowserRouter>
 		</Provider>
 	)
