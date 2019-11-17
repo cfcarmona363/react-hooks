@@ -9,14 +9,14 @@ const FirstExample = ({ history }) => {
 	const [value, setValue] = useState()
 	const [value2, setValue2] = useState()
 	const [log, setLog] = useState([])
+	const [numbers, setNumbers] = useState([])
 
 	//EFFECTS
 
-	// useEffect(() => {
-	// 	const l = [...log]
-	// 	l.push('This will be triggered after every render')
-	// 	setLog(l)
-	// })
+	useEffect(() => {
+		log.push('This will be triggered after every render')
+		setLog(log)
+	})
 
 	useEffect(() => {
 		const l = [...log]
@@ -53,6 +53,14 @@ const FirstExample = ({ history }) => {
 					<InputComponent
 						value={value2}
 						onChange={e => setValue2(e.target.value)}
+						placeholder="Insert value"
+					/>
+					<InputComponent
+						value={numbers}
+						onChange={e => {
+							numbers.push(e.target.value)
+							setNumbers(numbers)
+						}}
 						placeholder="Insert value"
 					/>
 				</div>
