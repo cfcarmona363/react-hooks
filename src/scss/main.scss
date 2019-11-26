@@ -3,9 +3,19 @@
 @import './textDisplay.scss';
 @import './loader.scss';
 
+body {
+	background-image: url('./react_wallpaper.png');
+	color: white;
+}
+
 .container {
 	width: 500px;
 	margin-top: 80px;
+	h3 {
+		display: inline-block;
+		background-color: black;
+		padding: 5px;
+	}
 }
 
 .buttons-group {
@@ -17,7 +27,7 @@
 
 .grid-container {
 	display: grid;
-	grid-template-columns: 30% 30% 20%;
+	grid-template-columns: 25% 35% 15%;
 	grid-gap: 100px;
 	margin-left: 80px;
 }

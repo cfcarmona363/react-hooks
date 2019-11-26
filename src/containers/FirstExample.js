@@ -8,13 +8,13 @@ const FirstExample = ({ history }) => {
 	//HOOKS
 	const [value, setValue] = useState()
 	const [value2, setValue2] = useState()
+	const [counter, setCounter] = useState(0)
 	const [log, setLog] = useState([])
-	const [numbers, setNumbers] = useState([])
 
 	//EFFECTS
 
 	useEffect(() => {
-		log.push('This will be triggered after every render')
+		log.push(`This will be triggered after every render. Counter: ${counter}`)
 		setLog(log)
 	})
 
@@ -55,20 +55,23 @@ const FirstExample = ({ history }) => {
 						onChange={e => setValue2(e.target.value)}
 						placeholder="Insert value"
 					/>
-					<InputComponent
-						value={numbers}
-						onChange={e => {
-							numbers.push(e.target.value)
-							setNumbers(numbers)
-						}}
-						placeholder="Insert value"
+					<div className="container">
+						<ButtonComponent
+							type="jelly"
+							label="Counter +1"
+							handleClick={() => setCounter(counter + 1)}
+						/>
+
+						<TextDisplay text={counter} key={counter} />
+					</div>
+				</div>
+				<div className="container">
+					<ButtonComponent
+						type="bubble"
+						label="Next example"
+						handleClick={() => history.push('/SecondExample')}
 					/>
 				</div>
-				<ButtonComponent
-					type="bubble"
-					label="Next example"
-					handleClick={() => history.push('/SecondExample')}
-				/>
 			</div>
 			<div>
 				{log.map((item, index) => (
