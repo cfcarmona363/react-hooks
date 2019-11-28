@@ -7,7 +7,7 @@ import useRequest from '../hooks/useRequest'
 import getCurrencyRates from '../services/currencyService'
 import TextDisplay from '../components/textDisplay'
 
-const CustomHooks = ({ history }) => {
+const CustomHooks = () => {
 	//CUSTOM HOOK
 	const [loading, setTimer] = useLoader()
 

@@ -12,6 +12,7 @@ const useRequests = service => {
 			setResponse(res.data)
 			setParam(false)
 		}
+
 		if (param) {
 			setIsLoading(true)
 			callService(param)
